@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&display=swap');
+
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'inter', sans-serif;
+}
+body
+{
+    background-image: url('https://img.freepik.com/free-vector/orange-question-mark-background-with-text-space_1017-27394.jpg?w=2000');
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+}
+#container
+{
+    border-radius: 5px;
+    width: 500px;
+    max-height: 630px;
+    border: 1px solid #865515e8;
+    overflow: hidden;
+    background-color: #e9e27e;
+    color: #000000;
+}
+.header
+{
+    background-color: #553f03e3;
+    height: 100px;
+    display: grid;
+    place-items: center;
+    font-size: 25px;
+    color:#f9d126;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px #1b2135ff;
+    border-bottom: 1px solid #ffffff20;
+    text-align: center;
+}
+ol
+{
+    padding: 10px 15px 10px 40px;
+}
+li
+{
+    font-size: 14px;
+    margin: 5px 0;
+}
+#start-quiz-wrapper
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+button
+{
+    background-color: #f9d126;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    margin: 10px 0 20px 0;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 13px;
+    color: #1e293b;
+    padding: 15px 20px;
+}
+button:hover
+{
+    background-color: #0ee92b;
+    color: whitesmoke;
+}
+
+.createdby{
+    text-align: center;
+}
+.content
+{
+    padding: 10px 30px;
+    max-height: 400px;
+    overflow: auto;
+}
+.question
+{
+    color: #000000;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 5px 3px;
+}
+
+.option,.result-option
+{
+    min-height: 40px;
+    border-radius: 10px;
+    background-color: #865515e8;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    font-size: 13px;
+    cursor: pointer;
+    color: #ffffff;
+    margin: 8px 0;
+    font-weight: 500;
+    position: relative;
+}
+.option span,.result-option span
+{   
+    position: absolute;
+    right: 15px;
+    border-radius: 5px;
+    font-size: 11px;
+    font-weight: bold;
+    background-color: #865515e8;
+    color: #fcfdfd;
+    padding: 5px;
+}
+
+
+.option:hover
+{
+    background-color: #e9be0e;
+    color: #1e293b;
+}
+
+.footer
+{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    margin: 15px 0;
+}
+.correct
+{
+    background-color: #1bd027;
+    color: #1e293b;
+}
+.correct span
+{
+    background: #1e293b;
+    color: #1bd027;
+}
+
+.wrong
+{
+    background-color: #e73030;
+    color: #1e293b;
+}
+
+.wrong span
+{
+    background: #1e293b;
+    color: #e73030;
+}
+
+
+
+#timer
+{
+    padding: 15px 5px; 
+    display: grid;
+    place-items: center;
+    border-radius: 5px;
+    color: #0f172a;
+    font-size: 13px;
+    font-weight: 500;
+    margin: 10px 0 20px 0;
+    color: #977e0c;
+    font-weight: bold;
+}
+.time-over
+{
+    color: #e73030 !important;
+}
+
+
+/* result page */
+#score
+{
+    text-align: center;
+    font-size: 14px;
+}
+#score b
+{
+    color: #865515e8;
+    font-size: 25px;
+}
+.result-score
+{
+    margin-top: 5px;
+}
+#result-footer
+{
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+#result-footer button
+{
+    margin: 0 10px;
+}
+
+#start-again
+{
+    background: transparent;
+    color: #865515e8;
+    border: 1px solid #865515e8;
+}
+#start-again:hover
+{
+    background: #865515e8;
+    color: #0f172a;
+}
