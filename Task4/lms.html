@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>complete responsive online education website design tutorial</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/lms.css".css">
+
+    <!-- custom js file link  -->
+    <script src="js/script.js" defer></script>
+
+</head>
+<body>
+    
+<!-- header section starts  -->
+
+<div id="menu-btn" class="fas fa-bars"></div>
+
+<header class="header">
+
+    <a href="#" class="logo"> <i class="fas fa-graduation-cap"></i> E-Learning </a>
+
+    <nav class="navbar">
+        <a href="#home"> <i class="fas fa-angle-right"></i> home </a>
+        <a href="index.html#category"> <i class="fas fa-angle-right"></i> category </a>
+        <a href="index.html#about"> <i class="fas fa-angle-right"></i> about </a>
+        <a href="index.html#courses"> <i class="fas fa-angle-right"></i> courses </a>
+        <a href="index.html#pricing"> <i class="fas fa-angle-right"></i> pricing </a>
+        <a href="index.html#contact"> <i class="fas fa-angle-right"></i> contact </a>
+        <a href="index.html#reviews"> <i class="fas fa-angle-right"></i> reviews </a>
+        <a href="index.html#blogs"> <i class="fas fa-angle-right"></i> blogs </a>
+        <a href="lms.html"> <i class="fas fa-angle-right"></i> Ask your doubts </a>
+        <a href="index.html#admin_login.html"> <i class="fas fa-angle-right"></i> Admin Dashboard </a>
+    </nav>
+
+    <div class="share">
+        <a href="#" class="fab fa-facebook-f"></a>
+        <a href="#" class="fab fa-twitter"></a>
+        <a href="#" class="fab fa-instagram"></a>
+        <a href="#" class="fab fa-linkedin"></a>
+    </div>
+
+    <p class="credit">created by <span>E-learning</span> | all rights reserved!</p>
+
+</header>
+
+<!-- header section ends -->
+
+
+<!-- Doubt asking section starts -->
+
+<section class="doubt" id="doubt">
+    <div class="title">
+        <h1>Ask Your Doubts</h1>
+    </div>
+    <form class="doubt-form">
+		<h2 class="upload-title">Upload Question Image</h2>
+		<div class="form-group">
+			<label for="document">Select Document:</label>
+			<input type="file" id="document" name="document">
+		</div>
+		<div class="form-group">
+			<label for="description">Ask doubt:</label>
+			<textarea id="description" name="description"  rows="6"></textarea>
+		</div>
+		<button type="submit">Upload</button>
+	</form>
+</section>
+
+
+<!-- Doubt section starts  -->
+
+<section>
+    <div class="title">
+        <h1>Doubt Resolution</h1>
+    </div>
+    <div class="communication">
+        <form>
+          <label for="subject">Subject:</label>
+          <input type="text" id="subject" name="subject">
+          <label for="message">Message:</label>
+          <textarea id="message" name="message"></textarea>
+          <input type="submit" value="Send">
+        </form>
+        <div class="messages">
+          <!-- messages will be displayed here -->
+        </div>
+      </div>
+</section>
+
+<!-- Doubt section ends -->
+
+<script>
+    const form = document.querySelector('.communication form');
+const messages = document.querySelector('.communication .messages');
+
+form.addEventListener('submit', e => {
+e.preventDefault();
+const subject = form.subject.value;
+const message = form.message.value;
+const newMessage = document.createElement('div');
+newMessage.innerHTML = `<strong>${subject}</strong>: ${message}`;
+messages.appendChild(newMessage);
+form.reset();
+});
+
+</script>
+
+
+</body>
+</html>
